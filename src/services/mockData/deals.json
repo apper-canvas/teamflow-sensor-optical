@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "title": "Enterprise Software License",
+    "value": 75000,
+    "stage": "Proposal",
+    "contactId": 1,
+    "companyId": 1,
+    "ownerId": 1,
+    "probability": 75,
+    "closeDate": "2024-02-15T00:00:00Z",
+    "createdAt": "2024-01-15T09:00:00Z"
+  },
+  {
+    "Id": 2,
+    "title": "Cloud Migration Project",
+    "value": 120000,
+    "stage": "Qualified",
+    "contactId": 2,
+    "companyId": 2,
+    "ownerId": 2,
+    "probability": 60,
+    "closeDate": "2024-03-01T00:00:00Z",
+    "createdAt": "2024-01-16T10:15:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "Digital Transformation",
+    "value": 95000,
+    "stage": "Lead",
+    "contactId": 3,
+    "companyId": 3,
+    "ownerId": 1,
+    "probability": 25,
+    "closeDate": "2024-04-15T00:00:00Z",
+    "createdAt": "2024-01-17T11:30:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "Security Audit Services",
+    "value": 45000,
+    "stage": "Won",
+    "contactId": 4,
+    "companyId": 4,
+    "ownerId": 3,
+    "probability": 100,
+    "closeDate": "2024-01-30T00:00:00Z",
+    "createdAt": "2024-01-18T13:45:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "AI Implementation",
+    "value": 180000,
+    "stage": "Proposal",
+    "contactId": 5,
+    "companyId": 5,
+    "ownerId": 2,
+    "probability": 80,
+    "closeDate": "2024-02-28T00:00:00Z",
+    "createdAt": "2024-01-19T15:20:00Z"
+  }
+]

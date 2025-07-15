@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "type": "call",
+    "description": "Follow-up call with Sarah Johnson about enterprise license",
+    "entityId": 1,
+    "entityType": "contact",
+    "userId": 1,
+    "timestamp": "2024-01-24T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "type": "email",
+    "description": "Sent proposal document to Michael Chen",
+    "entityId": 2,
+    "entityType": "deal",
+    "userId": 2,
+    "timestamp": "2024-01-24T11:15:00Z"
+  },
+  {
+    "Id": 3,
+    "type": "meeting",
+    "description": "Discovery meeting with Digital Wave team",
+    "entityId": 3,
+    "entityType": "company",
+    "userId": 1,
+    "timestamp": "2024-01-24T09:00:00Z"
+  },
+  {
+    "Id": 4,
+    "type": "deal_won",
+    "description": "Security Audit Services deal closed successfully",
+    "entityId": 4,
+    "entityType": "deal",
+    "userId": 3,
+    "timestamp": "2024-01-23T16:45:00Z"
+  },
+  {
+    "Id": 5,
+    "type": "contact_created",
+    "description": "Added new contact: Lisa Thompson from FutureTech",
+    "entityId": 5,
+    "entityType": "contact",
+    "userId": 2,
+    "timestamp": "2024-01-23T13:20:00Z"
+  }
+]

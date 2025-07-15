@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "name": "John Doe",
+    "email": "john.doe@company.com",
+    "role": "Sales Manager",
+    "avatar": ""
+  },
+  {
+    "Id": 2,
+    "name": "Jane Smith",
+    "email": "jane.smith@company.com",
+    "role": "Sales Representative",
+    "avatar": ""
+  },
+  {
+    "Id": 3,
+    "name": "Mike Wilson",
+    "email": "mike.wilson@company.com",
+    "role": "Business Development",
+    "avatar": ""
+  }
+]

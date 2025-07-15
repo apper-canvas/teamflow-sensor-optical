@@ -1,0 +1,57 @@
+[
+  {
+    "Id": 1,
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@techcorp.com",
+    "phone": "+1 (555) 123-4567",
+    "companyId": 1,
+    "ownerId": 1,
+    "createdAt": "2024-01-15T09:00:00Z",
+    "lastActivity": "2024-01-20T14:30:00Z",
+    "tags": ["Hot Lead", "Enterprise"]
+  },
+  {
+    "Id": 2,
+    "name": "Michael Chen",
+    "email": "m.chen@innovatetech.com",
+    "phone": "+1 (555) 234-5678",
+    "companyId": 2,
+    "ownerId": 2,
+    "createdAt": "2024-01-16T10:15:00Z",
+    "lastActivity": "2024-01-21T16:45:00Z",
+    "tags": ["Qualified", "SaaS"]
+  },
+  {
+    "Id": 3,
+    "name": "Emily Rodriguez",
+    "email": "emily.r@digitalwave.com",
+    "phone": "+1 (555) 345-6789",
+    "companyId": 3,
+    "ownerId": 1,
+    "createdAt": "2024-01-17T11:30:00Z",
+    "lastActivity": "2024-01-22T10:20:00Z",
+    "tags": ["Follow-up"]
+  },
+  {
+    "Id": 4,
+    "name": "David Park",
+    "email": "david.park@nexusltd.com",
+    "phone": "+1 (555) 456-7890",
+    "companyId": 4,
+    "ownerId": 3,
+    "createdAt": "2024-01-18T13:45:00Z",
+    "lastActivity": "2024-01-23T09:15:00Z",
+    "tags": ["New Contact"]
+  },
+  {
+    "Id": 5,
+    "name": "Lisa Thompson",
+    "email": "lisa.thompson@futuretech.com",
+    "phone": "+1 (555) 567-8901",
+    "companyId": 5,
+    "ownerId": 2,
+    "createdAt": "2024-01-19T15:20:00Z",
+    "lastActivity": "2024-01-24T11:30:00Z",
+    "tags": ["Enterprise", "Decision Maker"]
+  }
+]

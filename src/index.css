@@ -1,0 +1,79 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .toast-container {
+    font-size: 14px;
+  }
+  
+  .Toastify__toast {
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Toastify__toast--success {
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: white;
+  }
+  
+  .Toastify__toast--error {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+  }
+  
+  .Toastify__toast--info {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    color: white;
+  }
+}
+
+.table-row-hover {
+  transition: all 0.15s ease-in-out;
+}
+
+.table-row-hover:hover {
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.kanban-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.kanban-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar-item {
+  transition: all 0.15s ease-in-out;
+}
+
+.sidebar-item:hover {
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  color: white;
+  border-left: 4px solid #EC4899;
+}
+
+.sidebar-item.active {
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  color: white;
+  border-left: 4px solid #EC4899;
+}
