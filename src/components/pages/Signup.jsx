@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useContext } from 'react';
-import { AuthContext } from '../../App';
+import { AuthContext } from '../../bhushan';
 function Signup() {
   const navigate = useNavigate();
   const dispatch = useDispatch();

@@ -6,7 +6,7 @@ import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from '@/components/ui/Empty';
 import Button from '@/components/atoms/Button';
-import ApperIcon from "@/components/ProviderIcon";
+import ProviderIcon from "@/components/ApperIcon";
 import { dealService } from '@/services/api/dealService';
 import { contactService } from '@/services/api/contactService';
 import { companyService } from "@/services/api/companyService";
@@ -159,14 +159,14 @@ const Deals = () => {
               variant={viewMode === "kanban" ? "primary" : "secondary"}
               onClick={() => setViewMode("kanban")}
               className="flex items-center gap-2"
-            >
-              <ApperIcon name="Columns" className="h-4 w-4" />
+>
+              <ProviderIcon name="Columns" className="h-4 w-4" />
               Kanban
             </Button>
           </div>
           
-          <Button onClick={handleAdd} className="flex items-center gap-2">
-            <ApperIcon name="Plus" className="h-4 w-4" />
+<Button onClick={handleAdd} className="flex items-center gap-2">
+            <ProviderIcon name="Plus" className="h-4 w-4" />
             Add Deal
           </Button>
         </div>

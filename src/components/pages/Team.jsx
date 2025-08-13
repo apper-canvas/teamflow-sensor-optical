@@ -5,7 +5,7 @@ import Badge from "@/components/atoms/Badge";
 import ActivityFeed from "@/components/organisms/ActivityFeed";
 import Loading from '@/components/ui/Loading';
 import Error from '@/components/ui/Error';
-import ApperIcon from "@/components/ProviderIcon";
+import ProviderIcon from "@/components/ApperIcon";
 import { teamService } from '@/services/api/teamService';
 import { activityService } from '@/services/api/activityService';
 import { dealService } from "@/services/api/dealService";
@@ -89,8 +89,8 @@ const Team = () => {
         <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
           Team Overview
         </h1>
-        <div className="flex items-center gap-2 text-sm text-gray-500">
-          <ApperIcon name="Users" className="h-4 w-4" />
+<div className="flex items-center gap-2 text-sm text-gray-500">
+          <ProviderIcon name="Users" className="h-4 w-4" />
           {teamMembers.length} team members
         </div>
       </div>
@@ -166,8 +166,8 @@ const Team = () => {
         <div className="space-y-6">
           <Card className="p-6 bg-gradient-to-br from-primary-500 to-secondary-500 text-white">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                <ApperIcon name="Target" className="h-5 w-5" />
+<div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                <ProviderIcon name="Target" className="h-5 w-5" />
               </div>
               <h3 className="text-lg font-semibold">Team Pipeline</h3>
             </div>
@@ -187,8 +187,8 @@ const Team = () => {
 
           <Card className="p-6 bg-gradient-to-br from-green-500 to-emerald-500 text-white">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                <ApperIcon name="Trophy" className="h-5 w-5" />
+<div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                <ProviderIcon name="Trophy" className="h-5 w-5" />
               </div>
               <h3 className="text-lg font-semibold">Won Deals</h3>
             </div>
@@ -214,8 +214,8 @@ const Team = () => {
 
           <Card className="p-6 bg-gradient-to-br from-accent-500 to-pink-500 text-white">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                <ApperIcon name="Users" className="h-5 w-5" />
+<div className="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                <ProviderIcon name="Users" className="h-5 w-5" />
               </div>
               <h3 className="text-lg font-semibold">Team Contacts</h3>
             </div>

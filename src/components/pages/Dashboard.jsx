@@ -3,7 +3,7 @@ import Card from "@/components/atoms/Card";
 import Badge from "@/components/atoms/Badge";
 import Loading from '@/components/ui/Loading';
 import Error from '@/components/ui/Error';
-import ApperIcon from "@/components/ProviderIcon";
+import ProviderIcon from "@/components/ApperIcon";
 import { dealService } from '@/services/api/dealService';
 import { contactService } from '@/services/api/contactService';
 import { companyService } from "@/services/api/companyService";
@@ -102,8 +102,8 @@ const Dashboard = () => {
               <p className="text-primary-100 text-sm font-medium">Total Pipeline</p>
               <p className="text-3xl font-bold">{formatCurrency(totalDealValue)}</p>
             </div>
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-              <ApperIcon name="TrendingUp" className="h-6 w-6" />
+<div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+              <ProviderIcon name="TrendingUp" className="h-6 w-6" />
             </div>
           </div>
         </Card>
@@ -114,8 +114,8 @@ const Dashboard = () => {
               <p className="text-green-100 text-sm font-medium">Won Deals</p>
               <p className="text-3xl font-bold">{formatCurrency(totalWonValue)}</p>
             </div>
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-              <ApperIcon name="Trophy" className="h-6 w-6" />
+<div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+              <ProviderIcon name="Trophy" className="h-6 w-6" />
             </div>
           </div>
         </Card>
@@ -126,8 +126,8 @@ const Dashboard = () => {
               <p className="text-blue-100 text-sm font-medium">Active Pipeline</p>
               <p className="text-3xl font-bold">{formatCurrency(totalPipelineValue)}</p>
             </div>
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-              <ApperIcon name="Target" className="h-6 w-6" />
+<div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+              <ProviderIcon name="Target" className="h-6 w-6" />
             </div>
           </div>
         </Card>
@@ -138,8 +138,8 @@ const Dashboard = () => {
               <p className="text-pink-100 text-sm font-medium">Total Contacts</p>
               <p className="text-3xl font-bold">{contacts.length}</p>
             </div>
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-              <ApperIcon name="Users" className="h-6 w-6" />
+<div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+              <ProviderIcon name="Users" className="h-6 w-6" />
             </div>
           </div>
         </Card>
@@ -193,8 +193,8 @@ const Dashboard = () => {
           <div className="space-y-4">
             {activities.map((activity) => (
               <div key={activity.Id} className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <ApperIcon name={getActivityIcon(activity.type)} className="h-4 w-4 text-white" />
+<div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <ProviderIcon name={getActivityIcon(activity.type)} className="h-4 w-4 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm text-gray-900 font-medium">
@@ -216,24 +216,24 @@ const Dashboard = () => {
       {/* Quick Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="p-6 text-center">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-            <ApperIcon name="Building2" className="h-6 w-6 text-white" />
+<div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <ProviderIcon name="Building2" className="h-6 w-6 text-white" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900">{companies.length}</h3>
           <p className="text-sm text-gray-600">Total Companies</p>
         </Card>
 
         <Card className="p-6 text-center">
-          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-            <ApperIcon name="CheckCircle" className="h-6 w-6 text-white" />
+<div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <ProviderIcon name="CheckCircle" className="h-6 w-6 text-white" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900">{wonDeals.length}</h3>
           <p className="text-sm text-gray-600">Deals Won</p>
         </Card>
 
         <Card className="p-6 text-center">
-          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-            <ApperIcon name="Activity" className="h-6 w-6 text-white" />
+<div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <ProviderIcon name="Activity" className="h-6 w-6 text-white" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900">{pipelineDeals.length}</h3>
           <p className="text-sm text-gray-600">Active Deals</p>
