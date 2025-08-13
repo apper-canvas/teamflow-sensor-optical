@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "@/components/atoms/Card";
 import Avatar from "@/components/atoms/Avatar";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 import { format, formatDistanceToNow } from "date-fns";
 
 const ActivityFeed = ({ activities, teamMembers = [] }) => {

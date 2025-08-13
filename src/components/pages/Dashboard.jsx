@@ -3,7 +3,7 @@ import Card from "@/components/atoms/Card";
 import Badge from "@/components/atoms/Badge";
 import Loading from '@/components/ui/Loading';
 import Error from '@/components/ui/Error';
-import ProviderIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import { dealService } from '@/services/api/dealService';
 import { contactService } from '@/services/api/contactService';
 import { companyService } from "@/services/api/companyService";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Input from "@/components/atoms/Input";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 
 const SearchBar = ({ placeholder = "Search...", onSearch, className }) => {
   const [searchTerm, setSearchTerm] = useState("");

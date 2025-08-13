@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useSelector } from "react-redux";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 import { AuthContext } from "@/bhushan";
 import Avatar from "@/components/atoms/Avatar";
 import Button from "@/components/atoms/Button";

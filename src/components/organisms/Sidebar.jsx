@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 
 const Sidebar = ({ isOpen, onClose }) => {
   const navigation = [

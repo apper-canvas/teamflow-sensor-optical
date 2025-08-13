@@ -3,7 +3,7 @@ import Card from "@/components/atoms/Card";
 import Badge from "@/components/atoms/Badge";
 import Avatar from "@/components/atoms/Avatar";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 import { format } from "date-fns";
 
 const DealKanban = ({ deals, onDealUpdate, onDealEdit, teamMembers = [] }) => {

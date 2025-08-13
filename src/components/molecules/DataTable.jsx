@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "@/components/atoms/Card";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 
 const DataTable = ({ columns, data, onEdit, onDelete, onRowClick }) => {
   return (

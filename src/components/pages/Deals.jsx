@@ -6,7 +6,7 @@ import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from '@/components/ui/Empty';
 import Button from '@/components/atoms/Button';
-import ProviderIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import { dealService } from '@/services/api/dealService';
 import { contactService } from '@/services/api/contactService';
 import { companyService } from "@/services/api/companyService";

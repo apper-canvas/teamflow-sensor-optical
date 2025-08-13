@@ -5,7 +5,7 @@ import Badge from "@/components/atoms/Badge";
 import ActivityFeed from "@/components/organisms/ActivityFeed";
 import Loading from '@/components/ui/Loading';
 import Error from '@/components/ui/Error';
-import ProviderIcon from "@/components/ApperIcon";
+import ProviderIcon from "@/components/ProviderIcon";
 import { teamService } from '@/services/api/teamService';
 import { activityService } from '@/services/api/activityService';
 import { dealService } from "@/services/api/dealService";

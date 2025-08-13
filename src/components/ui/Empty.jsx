@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 
 const Empty = ({ 
   title = "No data found", 
