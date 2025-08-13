@@ -3,11 +3,11 @@ import Card from "@/components/atoms/Card";
 import Avatar from "@/components/atoms/Avatar";
 import Badge from "@/components/atoms/Badge";
 import ActivityFeed from "@/components/organisms/ActivityFeed";
-import Loading from "@/components/ui/Loading";
-import Error from "@/components/ui/Error";
-import ApperIcon from "@/components/ApperIcon";
-import { teamService } from "@/services/api/teamService";
-import { activityService } from "@/services/api/activityService";
+import Loading from '@/components/ui/Loading';
+import Error from '@/components/ui/Error';
+import ApperIcon from "@/components/ProviderIcon";
+import { teamService } from '@/services/api/teamService';
+import { activityService } from '@/services/api/activityService';
 import { dealService } from "@/services/api/dealService";
 import { contactService } from "@/services/api/contactService";
 

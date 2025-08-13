@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Card from "@/components/atoms/Card";
 import Badge from "@/components/atoms/Badge";
-import Loading from "@/components/ui/Loading";
-import Error from "@/components/ui/Error";
-import ApperIcon from "@/components/ApperIcon";
-import { dealService } from "@/services/api/dealService";
-import { contactService } from "@/services/api/contactService";
+import Loading from '@/components/ui/Loading';
+import Error from '@/components/ui/Error';
+import ApperIcon from "@/components/ProviderIcon";
+import { dealService } from '@/services/api/dealService';
+import { contactService } from '@/services/api/contactService';
 import { companyService } from "@/services/api/companyService";
 import { activityService } from "@/services/api/activityService";
 import { teamService } from "@/services/api/teamService";

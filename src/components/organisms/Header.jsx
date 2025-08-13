@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { useSelector } from 'react-redux';
-import Button from "@/components/atoms/Button";
-import Avatar from "@/components/atoms/Avatar";
+import { useSelector } from "react-redux";
 import ApperIcon from "@/components/ApperIcon";
-import { AuthContext } from "../../App";
+import { AuthContext } from "@/bhushan";
+import Avatar from "@/components/atoms/Avatar";
+import Button from "@/components/atoms/Button";
+
 const Header = ({ onMenuClick }) => {
   const { logout } = useContext(AuthContext);
   const { user } = useSelector((state) => state.user);
