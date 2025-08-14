@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ApperIcon from "@/components/ApperIcon";
+import ApperIcon from "@/components/ProviderIcon";
 import Button from "@/components/atoms/Button";
 import Card from "@/components/atoms/Card";
 import Input from "@/components/atoms/Input";
