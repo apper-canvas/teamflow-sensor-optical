@@ -9,14 +9,16 @@ import { contactService } from '@/services/api/contactService';
 import { companyService } from "@/services/api/companyService";
 import { activityService } from "@/services/api/activityService";
 import { teamService } from "@/services/api/teamService";
+import { taskService } from "@/services/api/taskService";
 import { format } from "date-fns";
 
 const Dashboard = () => {
   const [deals, setDeals] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [companies, setCompanies] = useState([]);
-  const [activities, setActivities] = useState([]);
+const [activities, setActivities] = useState([]);
   const [teamMembers, setTeamMembers] = useState([]);
+  const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -25,19 +27,21 @@ const Dashboard = () => {
       setLoading(true);
       setError("");
       
-      const [dealsData, contactsData, companiesData, activitiesData, teamData] = await Promise.all([
+const [dealsData, contactsData, companiesData, activitiesData, teamData, tasksData] = await Promise.all([
         dealService.getAll(),
         contactService.getAll(),
         companyService.getAll(),
         activityService.getAll(),
-        teamService.getAll()
+        teamService.getAll(),
+        taskService.getAll()
       ]);
       
       setDeals(dealsData);
       setContacts(contactsData);
       setCompanies(companiesData);
-      setActivities(activitiesData.slice(0, 5)); // Show only recent 5 activities
+setActivities(activitiesData.slice(0, 5)); // Show only recent 5 activities
       setTeamMembers(teamData);
+      setTasks(tasksData);
     } catch (err) {
       setError(err.message);
     } finally {

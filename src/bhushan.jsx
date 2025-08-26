@@ -7,6 +7,7 @@ import Layout from "@/components/organisms/Layout";
 import Dashboard from "@/components/pages/Dashboard";
 import Contacts from "@/components/pages/Contacts";
 import Deals from "@/components/pages/Deals";
+import Tasks from "@/components/pages/Tasks";
 import Companies from "@/components/pages/Companies";
 import Team from "@/components/pages/Team";
 import Login from '@/components/pages/Login';
@@ -15,7 +16,6 @@ import Callback from '@/components/pages/Callback';
 import ErrorPage from '@/components/pages/ErrorPage';
 import ResetPassword from '@/components/pages/ResetPassword';
 import PromptPassword from '@/components/pages/PromptPassword';
-
 // Create auth context
 export const AuthContext = createContext(null);
 
@@ -133,6 +133,7 @@ function App() {
           <Route path="contacts" element={<Contacts />} />
           <Route path="deals" element={<Deals />} />
           <Route path="companies" element={<Companies />} />
+<Route path="tasks" element={<Tasks />} />
           <Route path="team" element={<Team />} />
         </Route>
       </Routes>
