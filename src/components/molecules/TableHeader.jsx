@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "@/components/molecules/SearchBar";
 import FilterDropdown from "@/components/molecules/FilterDropdown";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ProviderIcon";
+import ApperIcon from "@/components/ApperIcon";
 
 const TableHeader = ({ 
   title, 

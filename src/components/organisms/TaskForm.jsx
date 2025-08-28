@@ -327,9 +327,9 @@ const TaskForm = ({ task, teamMembers = [], onSubmit, onCancel }) => {
           </div>
 
           <div className="flex justify-end gap-3 pt-6 border-t">
-            <Button
+<Button
               type="button"
-              variant="outline"
+              variant="secondary"
               onClick={onCancel}
               disabled={isSubmitting}
             >
