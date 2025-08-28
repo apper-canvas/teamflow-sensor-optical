@@ -7,7 +7,7 @@ import Loading from '@/components/ui/Loading';
 import Error from '@/components/ui/Error';
 import Empty from '@/components/ui/Empty';
 import Badge from "@/components/atoms/Badge";
-import ApperIcon from "@/components/ProviderIcon";
+import ApperIcon from "@/components/ApperIcon";
 import { taskService } from "@/services/api/taskService";
 import { teamService } from "@/services/api/teamService";
 import { format, isAfter } from "date-fns";
