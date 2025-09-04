@@ -1,6 +1,7 @@
 import { toast } from "react-toastify";
+import React from "react";
 
-const tableName = 'task';
+const tableName = 'task_c';
 
 // Initialize ApperClient
 const getApperClient = () => {
@@ -20,21 +21,14 @@ export const taskService = {
       const apperClient = getApperClient();
       
       const params = {
-        fields: [
+fields: [
           { "field": { "Name": "Name" } },
           { "field": { "Name": "Tags" } },
-          { "field": { "Name": "title" } },
-          { "field": { "Name": "description" } },
-          { "field": { "Name": "status" } },
-          { "field": { "Name": "priority" } },
-          { "field": { "Name": "due_date" } },
-          { "field": { "Name": "assigned_to" } },
-          { "field": { "Name": "related_entity_type" } },
-          { "field": { "Name": "related_entity_id" } },
-          { "field": { "Name": "estimated_hours" } },
-          { "field": { "Name": "actual_hours" } },
-          { "field": { "Name": "created_at" } },
-          { "field": { "Name": "updated_at" } }
+          { "field": { "Name": "description_c" } },
+          { "field": { "Name": "status_c" } },
+          { "field": { "Name": "due_date_c" } },
+          { "field": { "Name": "assignee_c" } },
+          { "field": { "Name": "priority_c" } }
         ]
       };
       
@@ -46,18 +40,14 @@ export const taskService = {
         return [];
       }
       
-      // Map database fields to component expected format
-      return (response.data || []).map(task => ({
+return (response.data || []).map(task => ({
         ...task,
-        name: task.Name,
-        assignedTo: task.assigned_to,
-        dueDate: task.due_date,
-        relatedEntityType: task.related_entity_type,
-        relatedEntityId: task.related_entity_id,
-        estimatedHours: task.estimated_hours,
-        actualHours: task.actual_hours,
-        createdAt: task.created_at,
-        updatedAt: task.updated_at
+        title: task.Name,
+        description: task.description_c,
+        status: task.status_c,
+        priority: task.priority_c,
+        dueDate: task.due_date_c,
+        assignedTo: task.assignee_c?.Id || task.assignee_c
       }));
     } catch (error) {
       if (error?.response?.data?.message) {
@@ -74,25 +64,17 @@ export const taskService = {
       await delay(200);
       const apperClient = getApperClient();
       
-      const params = {
+const params = {
         fields: [
           { "field": { "Name": "Name" } },
           { "field": { "Name": "Tags" } },
-          { "field": { "Name": "title" } },
-          { "field": { "Name": "description" } },
-          { "field": { "Name": "status" } },
-          { "field": { "Name": "priority" } },
-          { "field": { "Name": "due_date" } },
-          { "field": { "Name": "assigned_to" } },
-          { "field": { "Name": "related_entity_type" } },
-          { "field": { "Name": "related_entity_id" } },
-          { "field": { "Name": "estimated_hours" } },
-          { "field": { "Name": "actual_hours" } },
-          { "field": { "Name": "created_at" } },
-          { "field": { "Name": "updated_at" } }
+          { "field": { "Name": "description_c" } },
+          { "field": { "Name": "status_c" } },
+          { "field": { "Name": "due_date_c" } },
+          { "field": { "Name": "assignee_c" } },
+          { "field": { "Name": "priority_c" } }
         ]
       };
-      
       const response = await apperClient.getRecordById(tableName, parseInt(id), params);
       
       if (!response.success) {
@@ -102,18 +84,15 @@ export const taskService = {
       }
       
       // Map database fields to component expected format
-      const task = response.data;
+const task = response.data;
       return {
         ...task,
-        name: task.Name,
-        assignedTo: task.assigned_to,
-        dueDate: task.due_date,
-        relatedEntityType: task.related_entity_type,
-        relatedEntityId: task.related_entity_id,
-        estimatedHours: task.estimated_hours,
-        actualHours: task.actual_hours,
-        createdAt: task.created_at,
-        updatedAt: task.updated_at
+        title: task.Name,
+        description: task.description_c,
+        status: task.status_c,
+        priority: task.priority_c,
+        dueDate: task.due_date_c,
+        assignedTo: task.assignee_c?.Id || task.assignee_c
       };
     } catch (error) {
       if (error?.response?.data?.message) {
@@ -130,22 +109,15 @@ export const taskService = {
       await delay(400);
       const apperClient = getApperClient();
       
-      // Only include Updateable fields, map form data to database fields
+// Only include Updateable fields
       const createData = {
         Name: taskData.title,
         Tags: taskData.tags || '',
-        title: taskData.title,
-        description: taskData.description || '',
-        status: taskData.status || 'To Do',
-        priority: taskData.priority || 'Medium',
-        due_date: taskData.dueDate,
-        assigned_to: taskData.assignedTo,
-        related_entity_type: taskData.relatedEntityType || '',
-        related_entity_id: taskData.relatedEntityId || null,
-        estimated_hours: parseFloat(taskData.estimatedHours) || 0,
-        actual_hours: parseFloat(taskData.actualHours) || 0,
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        description_c: taskData.description || '',
+        status_c: taskData.status || 'New',
+        priority_c: taskData.priority || 'Medium',
+        due_date_c: taskData.dueDate,
+        assignee_c: taskData.assignedTo ? parseInt(taskData.assignedTo) : null
       };
       
       const params = {
@@ -176,21 +148,17 @@ export const taskService = {
         }
         
         if (successfulRecords.length > 0) {
-          const task = successfulRecords[0].data;
+const task = successfulRecords[0].data;
           return {
             ...task,
-            name: task.Name,
-            assignedTo: task.assigned_to,
-            dueDate: task.due_date,
-            relatedEntityType: task.related_entity_type,
-            relatedEntityId: task.related_entity_id,
-            estimatedHours: task.estimated_hours,
-            actualHours: task.actual_hours,
-            createdAt: task.created_at,
-            updatedAt: task.updated_at
+            title: task.Name,
+            description: task.description_c,
+            status: task.status_c,
+            priority: task.priority_c,
+            dueDate: task.due_date_c,
+            assignedTo: task.assignee_c?.Id || task.assignee_c
           };
         }
-      }
       
       return null;
     } catch (error) {
@@ -208,22 +176,16 @@ export const taskService = {
       await delay(300);
       const apperClient = getApperClient();
       
-      // Only include Updateable fields, map form data to database fields
+// Only include Updateable fields
       const updateData = {
         Id: parseInt(id),
         Name: taskData.title || taskData.Name,
         Tags: taskData.tags || '',
-        title: taskData.title,
-        description: taskData.description || '',
-        status: taskData.status,
-        priority: taskData.priority,
-        due_date: taskData.dueDate,
-        assigned_to: taskData.assignedTo,
-        related_entity_type: taskData.relatedEntityType || '',
-        related_entity_id: taskData.relatedEntityId || null,
-        estimated_hours: parseFloat(taskData.estimatedHours) || 0,
-        actual_hours: parseFloat(taskData.actualHours) || 0,
-        updated_at: new Date().toISOString()
+        description_c: taskData.description || '',
+        status_c: taskData.status,
+        priority_c: taskData.priority,
+        due_date_c: taskData.dueDate,
+        assignee_c: taskData.assignedTo ? parseInt(taskData.assignedTo) : null
       };
       
       const params = {
@@ -254,21 +216,17 @@ export const taskService = {
         }
         
         if (successfulRecords.length > 0) {
-          const task = successfulRecords[0].data;
+const task = successfulRecords[0].data;
           return {
             ...task,
-            name: task.Name,
-            assignedTo: task.assigned_to,
-            dueDate: task.due_date,
-            relatedEntityType: task.related_entity_type,
-            relatedEntityId: task.related_entity_id,
-            estimatedHours: task.estimated_hours,
-            actualHours: task.actual_hours,
-            createdAt: task.created_at,
-            updatedAt: task.updated_at
+            title: task.Name,
+            description: task.description_c,
+            status: task.status_c,
+            priority: task.priority_c,
+            dueDate: task.due_date_c,
+            assignedTo: task.assignee_c?.Id || task.assignee_c
           };
         }
-      }
       
       return null;
     } catch (error) {
@@ -327,12 +285,12 @@ export const taskService = {
   async updateStatus(id, newStatus) {
     try {
       await delay(200);
-      const apperClient = getApperClient();
+const apperClient = getApperClient();
       
+      // Only include the status field for update
       const updateData = {
         Id: parseInt(id),
-        status: newStatus,
-        updated_at: new Date().toISOString()
+        status_c: newStatus
       };
       
       const params = {
@@ -364,21 +322,17 @@ export const taskService = {
         
         if (successfulRecords.length > 0) {
           const task = successfulRecords[0].data;
-          return {
+return {
             ...task,
-            name: task.Name,
-            assignedTo: task.assigned_to,
-            dueDate: task.due_date,
-            relatedEntityType: task.related_entity_type,
-            relatedEntityId: task.related_entity_id,
-            estimatedHours: task.estimated_hours,
-            actualHours: task.actual_hours,
-            createdAt: task.created_at,
-            updatedAt: task.updated_at
+            title: task.Name,
+            description: task.description_c,
+            status: task.status_c,
+            priority: task.priority_c,
+            dueDate: task.due_date_c,
+            assignedTo: task.assignee_c?.Id || task.assignee_c
           };
         }
       }
-      
       return null;
     } catch (error) {
       if (error?.response?.data?.message) {

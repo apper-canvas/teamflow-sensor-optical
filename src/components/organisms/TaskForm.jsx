@@ -5,10 +5,10 @@ import Input from "@/components/atoms/Input";
 import ApperIcon from "@/components/ProviderIcon";
 
 const TaskForm = ({ task, teamMembers = [], onSubmit, onCancel }) => {
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
     title: '',
     description: '',
-    status: 'To Do',
+    status: 'New',
     priority: 'Medium',
     dueDate: '',
     assignedTo: '',
@@ -22,11 +22,11 @@ const TaskForm = ({ task, teamMembers = [], onSubmit, onCancel }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    if (task) {
+if (task) {
       setFormData({
         title: task.title || '',
         description: task.description || '',
-        status: task.status || 'To Do',
+        status: task.status || 'New',
         priority: task.priority || 'Medium',
         dueDate: task.dueDate ? task.dueDate.split('T')[0] : '',
         assignedTo: task.assignedTo || '',
@@ -186,7 +186,7 @@ const TaskForm = ({ task, teamMembers = [], onSubmit, onCancel }) => {
                 Status
               </label>
               <select
-                value={formData.status}
+value={formData.status}
                 onChange={(e) => handleInputChange('status', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               >

@@ -9,6 +9,7 @@ import Contacts from "@/components/pages/Contacts";
 import Deals from "@/components/pages/Deals";
 import Tasks from "@/components/pages/Tasks";
 import Companies from "@/components/pages/Companies";
+import Leads from "@/components/pages/Leads";
 import Team from "@/components/pages/Team";
 import Login from '@/components/pages/Login';
 import Signup from '@/components/pages/Signup';
@@ -131,9 +132,10 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="contacts" element={<Contacts />} />
-          <Route path="deals" element={<Deals />} />
+<Route path="deals" element={<Deals />} />
           <Route path="companies" element={<Companies />} />
-<Route path="tasks" element={<Tasks />} />
+          <Route path="leads" element={<Leads />} />
+          <Route path="tasks" element={<Tasks />} />
           <Route path="team" element={<Team />} />
         </Route>
       </Routes>

@@ -33,7 +33,7 @@ const ActivityFeed = ({ activities, teamMembers = [] }) => {
     return colorMap[type] || colorMap.default;
   };
 
-  const getUserName = (userId) => {
+const getUserName = (userId) => {
     const user = teamMembers.find(m => m.Id === userId);
     return user ? user.name : "Unknown User";
   };
@@ -55,15 +55,15 @@ const ActivityFeed = ({ activities, teamMembers = [] }) => {
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Avatar
-                    fallback={getUserInitials(activity.userId)}
+<Avatar
+                    fallback={getUserInitials(activity.user_id)}
                     size="sm"
                   />
                   <span className="text-sm font-medium text-gray-900">
-                    {getUserName(activity.userId)}
+                    {getUserName(activity.user_id)}
                   </span>
                 </div>
-                <div className="text-xs text-gray-500">
+<div className="text-xs text-gray-500">
                   {formatDistanceToNow(new Date(activity.timestamp), { addSuffix: true })}
                 </div>
               </div>
@@ -72,7 +72,7 @@ const ActivityFeed = ({ activities, teamMembers = [] }) => {
                 {activity.description}
               </p>
               
-              <div className="text-xs text-gray-400 mt-1">
+<div className="text-xs text-gray-400 mt-1">
                 {format(new Date(activity.timestamp), "MMM dd, yyyy 'at' h:mm a")}
               </div>
             </div>
